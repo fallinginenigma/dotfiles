@@ -105,9 +105,9 @@ call plug#end()
 
 "Adding spell-check from
 "castel.dev/post/lecture-notes-1/#correcting-spelling-mistakes-on-the-fly
-setlocal spell
-set spelllang=nl,en_gb
-inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+"setlocal spell
+"set spelllang=nl,en_gb
+"inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 "Adding inkscape figure manager
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figur>
