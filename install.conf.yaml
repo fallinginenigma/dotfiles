@@ -16,6 +16,8 @@
     ~/.tmux.conf: tmux.conf
     ~/.zsh:
     ~/.zshrc:
+    ~/.config/sxhkd/.sxhkdrc:
+    ~/.config/bspwm/.bspwmrc:
 
 - shell:
   - git submodule sync --recursive

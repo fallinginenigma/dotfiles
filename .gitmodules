@@ -31,3 +31,6 @@
 [submodule "shell/plugins/dircolors-solarized"]
 	path = shell/plugins/dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized.git
+[submodule "vim/plugged/sxhkd-vim"]
+	path = vim/plugged/sxhkd-vim
+	url = https://github.com/kovetskiy/sxhkd-vim

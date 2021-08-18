@@ -79,13 +79,12 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
-"Automatic Installation gor vim-plug
+"Automatic Installation for vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent>
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-
 
 "Specifing a directory for vim
 "Avoiding the use of standard directory name like 'plugin'
@@ -93,12 +92,20 @@ call plug#begin('~/.vim/plugged')
 
 "Installing a plugin for LaTeX
 Plug 'lervag/vimtex'
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 "Installing a plugin for Snippets in LaTeX: Ultisnips
 Plug 'Sirver/ultisnips'| Plug 'honza/vim-snippets'
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
+"Installing sxhkd - Simple X hotkey daemon plugin
+Plug 'kovetskiy/sxhkd-vim'
 
 "Initialising plugin system
 call plug#end()
